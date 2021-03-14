@@ -9,7 +9,9 @@
 > - The inputs are the person's height in centimetres and weight in kilograms.
 > - The output is their weight divided by their height in metres squared.
 >
->$ python bmi.py  Enter weight: 65  Enter height: 180
+>$ python bmi.py  
+>Enter weight: 65  
+>Enter height: 180
 >
 >BMI is 20.06.
 
