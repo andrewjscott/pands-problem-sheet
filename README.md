@@ -16,6 +16,30 @@
 >BMI is 20.06.
 
 ### Solution
+First, the input() method is used in order to ask the user to enter both a weight and a height. The numbers entered by the user
+are then assigned to variables called weight and height. 
+
+To calculate the BMI, I used the following line of code: bmi = float(weight)/((float(height)/100)**2)
+Python takes user inputs to be string types, so in order to perform calculations on them float is used to convert the variables
+to floating point numbers. Further, the height entered by the user has to be converted from cm to m, which is done by dividing
+the user's entered value for height by 100. The "/" operator is used for division, while the ** operator is used for exponentiation.
+The calculated value is assigned to the variable BMI. 
+
+The BMI value calculated is returned to the user, and for it to be printed the value must be converted back to a string again,
+which is done using the str() method. The round() method is used to restrict the calculated value to two decimal places, as per
+the example result of '20.06' in the task outline.
+
+After reading about the string isX methods in the book "Automate the Boring Stuff with Python" (2015, p. 130), the code was edited to
+include the method isDecimal() along with a while and if statement. This is to ensure that the user enters a valid whole number,
+and if the enter something that is not a whole number, the code will inform the user of their error and ask them to enter a number
+again. This will repeat until the user enters a valid whole number. 
+
+#### References
+1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
+2. W3schools.com. 2021. Python Data Types. [online] Available at: <https://www.w3schools.com/python/python_datatypes.asp> [Accessed 15 March 2021].
+3. W3schools.com. 2021. Python Arithmetic Operators. [online] Available at: <https://www.w3schools.com/python/python_operators.asp> [Accessed 15 March 2021].
+4. Sweigart, A., 2015. Automate the boring stuff with Python: practical programming for total beginners. No Starch Press.
+
 
 ## Weekly Task 2 - secondString
 >  Write a program that takes asks a user to input a string and outputs every second letter in reverse order.   
