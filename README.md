@@ -21,8 +21,8 @@ are then assigned to variables called weight and height.
 
 To calculate the BMI, I used the following line of code: bmi = float(weight)/((float(height)/100)**2)
 Python takes user inputs to be string types, so in order to perform calculations on them float is used to convert the variables
-to floating point numbers [2]. Further, the height entered by the user has to be converted from cm to m, which is done by dividing
-the user's entered value for height by 100. The "/" operator is used for division, while the ** operator is used for exponentiation [3].
+to floating point numbers[2]. Further, the height entered by the user has to be converted from cm to m, which is done by dividing
+the user's entered value for height by 100. The "/" operator is used for division, while the ** operator is used for exponentiation[3].
 The calculated value is assigned to the variable BMI. 
 
 The BMI value calculated is returned to the user, and for it to be printed the value must be converted back to a string again,
@@ -43,7 +43,7 @@ again. This will repeat until the user enters a valid whole number.
 > .o zletrv pu o wr cu h   
 
 ### Solution
-First the user is asked to input a string which is stored to a variable. Each character in a string has a corresponding numberical value, with the first character 0, second character 1, etc. Slicing a string is done by using square brackets followed by the number corresponding to the start point, end point, and steps of the slicing with each number seperated by colons, ie [slicing start point:slicing end point:steps taken while slicing] [5].
+First the user is asked to input a string which is stored to a variable. Each character in a string has a corresponding numberical value, with the first character 0, second character 1, etc. Slicing a string is done by using square brackets followed by the number corresponding to the start point, end point, and steps of the slicing with each number seperated by colons, ie [slicing start point:slicing end point:steps taken while slicing][5].
 
 If the slicing start and end points are left blank, python assumes these values to correspond to the beginning and end of the string
 If the steps is left out copletely pythons continues with steps as a value of 1 by default. A minus value for steps means the string is sliced in reverse. So in this code, the values for the start and end point are left blank to include the entire string, while
