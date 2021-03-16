@@ -5,7 +5,7 @@
 # Author: Andrew Scott
 
 # Tells the user to enter a positive integers which is stored to a variable called number
-# This section of code was mostly copied from a thread onn stackoverflow in order to return 
+# This section of code was mostly apated from a response on stackoverflow in order to return 
 # an error should the user enter anything other than a positive number: 
 # https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer
 while True:
