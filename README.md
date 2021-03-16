@@ -21,8 +21,8 @@ are then assigned to variables called weight and height.
 
 To calculate the BMI, I used the following line of code: bmi = float(weight)/((float(height)/100)**2)
 Python takes user inputs to be string types, so in order to perform calculations on them float is used to convert the variables
-to floating point numbers. Further, the height entered by the user has to be converted from cm to m, which is done by dividing
-the user's entered value for height by 100. The "/" operator is used for division, while the ** operator is used for exponentiation.
+to floating point numbers [2]. Further, the height entered by the user has to be converted from cm to m, which is done by dividing
+the user's entered value for height by 100. The "/" operator is used for division, while the ** operator is used for exponentiation [3].
 The calculated value is assigned to the variable BMI. 
 
 The BMI value calculated is returned to the user, and for it to be printed the value must be converted back to a string again,
