@@ -16,7 +16,7 @@
 >BMI is 20.06.
 
 ### Solution
-First, the input() method is used in order to ask the user to enter both a weight and a height. The numbers entered by the user
+First, the input() method[1] is used in order to ask the user to enter both a weight and a height. The numbers entered by the user
 are then assigned to variables called weight and height. 
 
 To calculate the BMI, I used the following line of code: bmi = float(weight)/((float(height)/100)**2)
@@ -29,17 +29,10 @@ The BMI value calculated is returned to the user, and for it to be printed the v
 which is done using the str() method. The round() method is used to restrict the calculated value to two decimal places, as per
 the example result of '20.06' in the task outline.
 
-After reading about the string isX methods in the book "Automate the Boring Stuff with Python" (2015, p. 130), the code was edited to
+After reading about the string isX methods in the book "Automate the Boring Stuff with Python" (2015, p. 130)[4], the code was edited to
 include the method isDecimal() along with a while and if statement. This is to ensure that the user enters a valid whole number,
 and if the enter something that is not a whole number, the code will inform the user of their error and ask them to enter a number
 again. This will repeat until the user enters a valid whole number. 
-
-#### References
-1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
-2. W3schools.com. 2021. Python Data Types. [online] Available at: <https://www.w3schools.com/python/python_datatypes.asp> [Accessed 15 March 2021].
-3. W3schools.com. 2021. Python Arithmetic Operators. [online] Available at: <https://www.w3schools.com/python/python_operators.asp> [Accessed 15 March 2021].
-4. Sweigart, A., 2015. Automate the boring stuff with Python: practical programming for total beginners. No Starch Press.
-
 
 ## Weekly Task 2 - secondString
 >  Write a program that takes asks a user to input a string and outputs every second letter in reverse order.   
@@ -50,6 +43,13 @@ again. This will repeat until the user enters a valid whole number.
 > .o zletrv pu o wr cu h   
 
 ### Solution
+First the user is asked to input a string which is stored to a variable. Each character in a string has a corresponding numberical value, with the first character 0, second character 1, etc. Slicing a string is done by using square brackets followed by the number corresponding to the start point, end point, and steps of the slicing with each number seperated by colons, ie [slicing start point:slicing end point:steps taken while slicing] [5].
+
+If the slicing start and end points are left blank, python assumes these values to correspond to the beginning and end of the string
+If the steps is left out copletely pythons continues with steps as a value of 1 by default. A minus value for steps means the string is sliced in reverse. So in this code, the values for the start and end point are left blank to include the entire string, while
+the steps is set to -2, which starts the slicing in reverse and only insludes every second letter. 
+
+Using slicing in this manner, the user entered string can be manipulated and output in the manner requested in the task outline. 
 
 ## Weekly Task 3 - collatz
 > Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation.   
@@ -114,3 +114,11 @@ again. This will repeat until the user enters a valid whole number.
 > Some marks will be given for making the plot look nice.
 
 ### Solution
+
+#### References
+1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
+2. W3schools.com. 2021. Python Data Types. [online] Available at: <https://www.w3schools.com/python/python_datatypes.asp> [Accessed 15 March 2021].
+3. W3schools.com. 2021. Python Arithmetic Operators. [online] Available at: <https://www.w3schools.com/python/python_operators.asp> [Accessed 15 March 2021].
+4. Sweigart, A., 2015. Automate the boring stuff with Python: practical programming for total beginners. No Starch Press.
+5. educative.io. 2021. String Slicing. [online] Available at: <https://www.educative.io/courses/learn-python-3-from-scratch/mE73nLqKGA3> [Accessed 15 March 2021].
+
