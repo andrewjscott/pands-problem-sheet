@@ -4,11 +4,20 @@
 
 # Author: Andrew Scott
 
-#Tells the user to enter a positive integers which is stored to a variable called number
-number = int(input("Please enter a positive integer: "))
-# Returns an error message if the user enters a negative integer and asks them to enter a new integer
-if number <= 0: 
-    number = int(input("That is not a positive integer. Please enter a positive integer: "))
+# Tells the user to enter a positive integers which is stored to a variable called number
+# This section of code was mostly copied from a thread onn stackoverflow in order to return 
+# an error should the user enter anything other than a positive number: 
+# https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer
+while True:
+    val = input("Enter a positive integer: ")
+    try:
+        number = int(val)
+        if number <= 0:  # if not a positive int print message and ask for input again
+            print("Sorry, input must be a positive integer. Please try again.")
+            continue
+        break
+    except ValueError:
+        print("That's not an integer. Please try again.")     
 
 # Creates a list with the first item in the list being the integer entered by the user
 numbers = [number]

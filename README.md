@@ -62,6 +62,19 @@ Using slicing in this manner, the user entered string can be manipulated and out
 > 10 5 16 8 4 2 1    
 
 ### Solution
+The first step was to take input from the user for the starting integer. 
+
+To keep track of each step in the collatz process, a list was created with the first entry being the number entered by the user.
+A while loop is used so the calculations will continue until the value is equal to 0[6]. The task requires different calculations based on if the entered number is odd or even. A number is even if it leaves no remainder when divided by 2, so this was used to identify even numbers.
+
+An if statement is then used so different calculations can be made depending on if the number is even or odd[7]. If the 
+number is determined to be even, it is divided by 2 and the result is added to the list alongside the initial entered number. This result is now the number that will be used in calculations. 
+
+As a number that is not even is by default an odd number, and else statement will suffice after the statement determines whether
+the number is even or not. If there is a remainder after the number is divided by 2, then the line of code following the if statement is ignored, and instead the code after the else statement is used, where the number is first multiplied by three, then 1 added to that answer. This result is then added to the list[8]. This process is repeated until the result is 0. When this happens the loop ends and all the numbers that have been added to the list are output.
+
+This code was later altered to include error detection to ensure the user only enters a positive integer. If they enter anything else an error message is ouput and they are asked to input a positive integer again. The code to do this was found on stackoverflow as an answer by a user named Padraic Cunningham[9]. This code includes a loop that first determines if the user input is an integer. if it is, it then checks if it is positive by seeing if the integer is less than 0. If the number is less than 0 the user is asked to enter a number again. If the user enters something other than an integer, a seperate block of code kicks in to tell the user that they have not entered an integer and to try again. This will repeat and only end once the user enters a positive integer. 
+
 
 ## Weekly Task 4 - weekday
 > Write a program that outputs whether or not today is a weekday.   
@@ -120,5 +133,9 @@ Using slicing in this manner, the user entered string can be manipulated and out
 2. W3schools.com. 2021. Python Data Types. [online] Available at: <https://www.w3schools.com/python/python_datatypes.asp> [Accessed 15 March 2021].
 3. W3schools.com. 2021. Python Arithmetic Operators. [online] Available at: <https://www.w3schools.com/python/python_operators.asp> [Accessed 15 March 2021].
 4. Sweigart, A., 2015. Automate the boring stuff with Python: practical programming for total beginners. No Starch Press.
-5. educative.io. 2021. String Slicing. [online] Available at: <https://www.educative.io/courses/learn-python-3-from-scratch/mE73nLqKGA3> [Accessed 15 March 2021].
+5. educative.io. 2021. String Slicing. [online] Available at: <https://www.educative.io/courses/learn-python-3-from-scratch/mE73nLqKGA3> [Accessed 16 March 2021].
+6. realpython.com. 2021. Python "while" Loops (Indefinite Iteration). [online] Available at: <https://realpython.com/python-while-loop/> [Accessed 16 March 2021].
+7. realpython.com. 2021. Conditional Statements in Python. [online] Available at: <https://realpython.com/python-conditional-statements/> [Accessed 16 March 2021].
+8. W3schools.com. 2021. Python Lists. [online] Available at: <https://www.w3schools.com/python/python_lists.asp> [Accessed 16 March 2021]
+9. stackoverflow.com. 2021. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
 
