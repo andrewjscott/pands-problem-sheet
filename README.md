@@ -75,7 +75,7 @@ the number is even or not. If there is a remainder after the number is divided b
 
 Printing a list does mean the output is slightly different that the output in the task outline ([10, 5, 16, 8, 4, 2, 1] vs 10 5 16 8 4 2 1). However, I feel using a list is the neatest method to solve this problem, so decided to use it despite the aesthetic differences in the output. 
 
-This code was later altered to include error detection to ensure the user only enters a positive integer. If they enter anything else an error message is ouput and they are asked to input a positive integer again. The code to do this was found on stackoverflow as an answer by a user named Padraic Cunningham[9]. This code includes a loop that first determines if the user input is an integer. if it is, it then checks if it is positive by seeing if the integer is less than 0. If the number is less than 0 the user is asked to enter a number again. If the user enters something other than an integer, a seperate block of code kicks in to tell the user that they have not entered an integer and to try again. This will repeat and only end once the user enters a positive integer. 
+This code was later altered to include error detection to ensure the user only enters a positive integer. If they enter anything else an error message is ouput and they are asked to input a positive integer again. The code to do this was found on stackoverflow as an answer by a user named Padraic Cunningham[9]. This code includes a loop that first determines if the user input is an integer. if it is, it then checks if it is positive by seeing if the integer is less than 0. If the number is less than 0 the user is asked to enter a number again. If the user enters something other than an integer, a seperate block of code kicks in to tell the user that they have not entered an integer and to try again. This will repeat and only end once the user enters a positive integer. Further research shows that the 'try except' aspect of this code is used to test for error detection[10].
 
 
 ## Weekly Task 4 - weekday
@@ -140,4 +140,6 @@ This code was later altered to include error detection to ensure the user only e
 7. realpython.com. 2021. Conditional Statements in Python. [online] Available at: <https://realpython.com/python-conditional-statements/> [Accessed 16 March 2021].
 8. W3schools.com. 2021. Python Lists. [online] Available at: <https://www.w3schools.com/python/python_lists.asp> [Accessed 16 March 2021]
 9. stackoverflow.com. 2021. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
+10. W3schools.com. 2021. Python Try Except. [online] Available at: <https://www.w3schools.com/python/python_try_except.asp> [Accessed 17
+ March 2021]
 
