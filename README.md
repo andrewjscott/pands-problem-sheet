@@ -94,6 +94,9 @@ This code was later altered to include error detection to ensure the user only e
 > It is the weekend, yay! 
 
 ### Solution
+To easily work with dates in python, the "datetime" module was imported[11]. A list containing the two days of the weekend (Saturday and Sunday) was then created. A variable "date" was assigned information about the current date using the method "datetime.datetime.now()". This variable will then be updated to relect the date whenever the program is run. 
+
+The datetime method ".strftime()" can now be used with the variable "date", and by passing the directive "%A" as an argument, the full word of the current day of the week is returned. The day that is returned is then compared with the previously created list, and if it matches a value in that list (ie the returned day is either "Saturday" or "Sunday") then the message "It is the weekend, yay!" is returned to the user. If the returned day is neither Saturday nor Sunday it is by default a weekday, so the returned message is instead "Yes, unfortunately today is a weekday.".
 
 ## Weekly Task 5 - squareRoot
 > Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.
@@ -114,6 +117,8 @@ This code was later altered to include error detection to ensure the user only e
 
 ### Solution
 
+
+
 ## Weekly Task 6 - numberOfEs
 > Write a program that reads in a text file and outputs the number of e's it contains.  
 > The program should take the filename from an argument on the command line.
@@ -123,12 +128,14 @@ This code was later altered to include error detection to ensure the user only e
 
 ### Solution
 
+
 ## Weekly Task 7 - plotTask
 > Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.
 >
 > Some marks will be given for making the plot look nice.
 
 ### Solution
+
 
 #### References
 1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
@@ -142,4 +149,5 @@ This code was later altered to include error detection to ensure the user only e
 9. stackoverflow.com. 2021. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
 10. W3schools.com. 2021. Python Try Except. [online] Available at: <https://www.w3schools.com/python/python_try_except.asp> [Accessed 17
  March 2021]
+ 11. W3schools.com. 2021. Python Datetime. [online] Available at: <https://www.w3schools.com/python/python_datetime.asp> [Accessed 18 March 2021]
 
