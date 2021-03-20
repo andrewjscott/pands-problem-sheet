@@ -139,7 +139,11 @@ For taking the user input, code from the solution for the collatz task was reuse
 > 116960 
 
 ### Solution
+This task requires teh filename to be taken as an argument from the commandline, which can be done by importing the sys module and using sys.argv[14]. As the program itself is in position 0, the line sys.argv[1] takes the next argument, ie the filename entered by the user, and stores it too a variable called filename.
 
+The task was ambiguous as to whether the program should count only the symbol 'e', ie only the lower case e, or if it should count all instances or the letter e, which would include lower case e and upper case E. As such, two functions have been included to cover both cases. The first counts instances of 'e' while the second counts instances of 'E'. The function imports the file called by the user and the count method is used to count the number of instances of either 'e' or 'E'[15][16]. The returned values are converted to strings to be output to the user.
+
+If statements are used when returning the values to the user for gramatical purposes. Should either character only appear once, the singular 'time' is used, otherwise the sentence with say the character appear "x times". The variable total is the sum of the amount of lowercase es and uppercase Es, which is also returned to the user.
 
 ## Weekly Task 7 - plotTask
 > Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.
@@ -149,19 +153,25 @@ For taking the user input, code from the solution for the collatz task was reuse
 ### Solution
 
 
+#### Acknowledgemnts
+It should be noted that the majority of the ideas and concepts covered here came from a fantastic lecture series called Programming and Scripting by Andrew Beatty. The refrences below are in many cases supplemental to that series and are offered as a textual alternative that covers similar content. 
+
 #### References
 1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
 2. W3schools.com. 2021. Python Data Types. [online] Available at: <https://www.w3schools.com/python/python_datatypes.asp> [Accessed 15 March 2021].
 3. W3schools.com. 2021. Python Arithmetic Operators. [online] Available at: <https://www.w3schools.com/python/python_operators.asp> [Accessed 15 March 2021].
 4. Sweigart, A., 2015. Automate the boring stuff with Python: practical programming for total beginners. No Starch Press.
 5. educative.io. 2021. String Slicing. [online] Available at: <https://www.educative.io/courses/learn-python-3-from-scratch/mE73nLqKGA3> [Accessed 16 March 2021].
-6. realpython.com. 2021. Python "while" Loops (Indefinite Iteration). [online] Available at: <https://realpython.com/python-while-loop/> [Accessed 16 March 2021].
-7. realpython.com. 2021. Conditional Statements in Python. [online] Available at: <https://realpython.com/python-conditional-statements/> [Accessed 16 March 2021].
+6. Sturtz, J. 2021. Python "while" Loops (Indefinite Iteration). [online] Available at: <https://realpython.com/python-while-loop/> [Accessed 16 March 2021].
+7. Sturtz, J. 2021. Conditional Statements in Python. [online] Available at: <https://realpython.com/python-conditional-statements/> [Accessed 16 March 2021].
 8. W3schools.com. 2021. Python Lists. [online] Available at: <https://www.w3schools.com/python/python_lists.asp> [Accessed 16 March 2021]
 9. stackoverflow.com. 2021. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
 10. W3schools.com. 2021. Python Try Except. [online] Available at: <https://www.w3schools.com/python/python_try_except.asp> [Accessed 17
  March 2021]
- 11. W3schools.com. 2021. Python Datetime. [online] Available at: <https://www.w3schools.com/python/python_datetime.asp> [Accessed 18 March 2021]
- 12. Dellajustina, F.J. and Martins, L.C., 2014. The Hidden Geometry of the Babylonian Square Root Method. Applied Mathematics, 5(19), p.2982.
- 13. Brent. 2009. Square roots with pencil and paper: the Babylonian method. [online] Available at: <https://mathlesstraveled.com/2009/05/18/square-roots-with-pencil-and-paper-the-babylonian-method/> [Accessed 20 March 2021]
+11. W3schools.com. 2021. Python Datetime. [online] Available at: <https://www.w3schools.com/python/python_datetime.asp> [Accessed 18 March 2021]
+12. Dellajustina, F.J. and Martins, L.C., 2014. The Hidden Geometry of the Babylonian Square Root Method. Applied Mathematics, 5(19), p.2982.
+13. Brent. 2009. Square roots with pencil and paper: the Babylonian method. [online] Available at: <https://mathlesstraveled.com/2009/05/18/square-roots-with-pencil-and-paper-the-babylonian-method/> [Accessed 20 March 2021]
+14. geeksforgeeks.com. 2019. How to use sys.argv in Python. [online] Available at: <https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/> [Accessed 20 March 2021]
+15. Ndlovu, V. 2021. Working With Files in Python. [online] Available at: <https://realpython.com/working-with-files-in-python/> [Accessed 16 March 2021].
+16. W3schools.com. 2021. Python String count() Method. [online] Available at: <https://www.w3schools.com/python/ref_string_count.asp> [Accessed 20 March 2021]
 
