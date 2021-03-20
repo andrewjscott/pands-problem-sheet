@@ -116,8 +116,20 @@ The datetime method ".strftime()" can now be used with the variable "date", and 
 > The square root of 14.5 is approx. 3.8.   
 
 ### Solution
+The first step was to research methods for calculating square roots. While the task suggests using the Newton method for calculating square roots, I found the additional calculus and formulae associated with the method both distracting and overwhelming. This initial research did reveal that the Newton method is closely related to the Babylonian method for calculating square roots, however, and finding this method easier to read and follow I used the Babylonian method in this code[12][13]. For this code I have written it as newG = (g + (x/g)) / 2, g being an initial guess, and x being the number entered by the user that we want to find the square root of. This formula is then repeated with the answer from the previous itteration used in place of the initial guess, and this process repeats until the answers are almost identical. 
 
+The function for calculating a square root contains two initial variables. 
 
+The first, g, is the initial guess. The formula requires an initial guess for the square root's value. Rather than have the user 
+enter a value, a formula of the number that we want to find the square root of divided by 2 is used as the initial guess. This 
+is not the most efficient in terms of finding the square root in the fewest itterations of the loop, as a guess closer to 
+the square root will solve faster. However, this formula for an initial guess should be good enough for our purposes and 
+saves the user from having to enter anything other than the number the want the square root of. As the function itterates, 
+the value for g is replaced by the answer of that loop, newG.
+
+The second, t, is the tolerance. This means the program will loop until the current answer for g/newG minus the previous answer for g/newG is within the tolerance level. When this happens, we should be returned a pretty good approximation of the square root. 
+
+For taking the user input, code from the solution for the collatz task was reused for error detection, as this task also requires the user input to only be a positive number. The only change is converting the user input to a float. The sqrt function previously written is then called, and the output is returned and rounded to 1 decimal place.
 
 ## Weekly Task 6 - numberOfEs
 > Write a program that reads in a text file and outputs the number of e's it contains.  
@@ -150,4 +162,6 @@ The datetime method ".strftime()" can now be used with the variable "date", and 
 10. W3schools.com. 2021. Python Try Except. [online] Available at: <https://www.w3schools.com/python/python_try_except.asp> [Accessed 17
  March 2021]
  11. W3schools.com. 2021. Python Datetime. [online] Available at: <https://www.w3schools.com/python/python_datetime.asp> [Accessed 18 March 2021]
+ 12. Dellajustina, F.J. and Martins, L.C., 2014. The Hidden Geometry of the Babylonian Square Root Method. Applied Mathematics, 5(19), p.2982.
+ 13. Brent. 2009. Square roots with pencil and paper: the Babylonian method. [online] Available at: <https://mathlesstraveled.com/2009/05/18/square-roots-with-pencil-and-paper-the-babylonian-method/> [Accessed 20 March 2021]
 
