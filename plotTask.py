@@ -6,7 +6,7 @@ import numpy as np
 
 # Sets the range of the x axis from 0-4 using numpy, but added as a float to allow for plot points every 0.5 steps
 # I chose 0.5 as the range is quite small, so having half steps helps make the graph clearer in my opinion
-xPoints = np.arange(0.0,4.0,0.5)
+xPoints = np.arange(0.0, 4.0, 0.5)
 
 # Sets the plot points for each function on the y-axis in relation to the x-axis values
 yPoints1 = xPoints
@@ -22,6 +22,7 @@ plt.plot(xPoints, yPoints2, 'r--^', label='g(x) =  x**2')
 plt.plot(xPoints, yPoints3, 'g:s', label='h(x) = x**3')
 
 # The graph was showing the y-axis values in steps of 10 by default which I felt was too large, so I changed it to 5 with this line
+# Code adapted from an answer found at: https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-x-or-y-axis-in-matplotlib/12608937
 plt.yticks(np.arange(0, max(yPoints3)+1, 5.0))
 
 # Labelling the graph to explain what it's showing
@@ -36,4 +37,4 @@ plt.grid()
 plt.show()
 
 # Saves the plot as a png image
-plt.savefig('plotTask.png')
+plt.savefig('taskPlot.png')

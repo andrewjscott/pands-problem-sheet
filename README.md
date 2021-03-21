@@ -1,9 +1,6 @@
 # Programming and Scripting Problem Sheets
 ## Andrew Scott - Student ID: G00398249
 
-## Table of contents
-
-
 ## Weekly Task 1 - bmi
 > 1. Write a program that calculates somebody's Body Mass Index (BMI). Call the file bmi.py
 > - The inputs are the person's height in centimetres and weight in kilograms.
@@ -34,6 +31,7 @@ include the method isDecimal() along with a while and if statement. This is to e
 and if the enter something that is not a whole number, the code will inform the user of their error and ask them to enter a number
 again. This will repeat until the user enters a valid whole number. 
 
+
 ## Weekly Task 2 - secondString
 >  Write a program that takes asks a user to input a string and outputs every second letter in reverse order.   
 >
@@ -50,6 +48,7 @@ If the steps is left out copletely pythons continues with steps as a value of 1 
 the steps is set to -2, which starts the slicing in reverse and only insludes every second letter. 
 
 Using slicing in this manner, the user entered string can be manipulated and output in the manner requested in the task outline. 
+
 
 ## Weekly Task 3 - collatz
 > Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation.   
@@ -98,6 +97,7 @@ To easily work with dates in python, the "datetime" module was imported[11]. A l
 
 The datetime method ".strftime()" can now be used with the variable "date", and by passing the directive "%A" as an argument, the full word of the current day of the week is returned. The day that is returned is then compared with the previously created list, and if it matches a value in that list (ie the returned day is either "Saturday" or "Sunday") then the message "It is the weekend, yay!" is returned to the user. If the returned day is neither Saturday nor Sunday it is by default a weekday, so the returned message is instead "Yes, unfortunately today is a weekday.".
 
+
 ## Weekly Task 5 - squareRoot
 > Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.
 >
@@ -131,6 +131,7 @@ The second, t, is the tolerance. This means the program will loop until the curr
 
 For taking the user input, code from the solution for the collatz task was reused for error detection, as this task also requires the user input to only be a positive number. The only change is converting the user input to a float. The sqrt function previously written is then called, and the output is returned and rounded to 1 decimal place.
 
+
 ## Weekly Task 6 - numberOfEs
 > Write a program that reads in a text file and outputs the number of e's it contains.  
 > The program should take the filename from an argument on the command line.
@@ -145,12 +146,16 @@ The task was ambiguous as to whether the program should count only the symbol 'e
 
 If statements are used when returning the values to the user for gramatical purposes. Should either character only appear once, the singular 'time' is used, otherwise the sentence with say the character appear "x times". The variable total is the sum of the amount of lowercase es and uppercase Es, which is also returned to the user.
 
+
 ## Weekly Task 7 - plotTask
 > Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.
 >
 > Some marks will be given for making the plot look nice.
 
 ### Solution
+First, matlibplot and numpy are imported. When first trying to import matlibplot and numpy, Visual Studio Code threw up an error, pylint(import-error). By searching for a solution it was discovered this was due to the default python interpreter in Visual Studio Code being regular python 3, and the problem was solved by changing this to Anaconda's python 3[17]. Matlibplot allows for the creation of plots within python[18], whereas numpy is used to create an array which will be used to define the parameters of the plot's x-axis[19]. The task outline asks for a range of [0, 4] which is what is used. A step of 0.5 within this range is also used to allow extra points on the plot than the default 1 step. I feel this makes the graph easier to read. More points would be too cluttered, whereas fewer points would be too sparse. 
+
+The y-axis plots are defined by the results of the three functions being plotted, so each gets their own variable. The results of each function are then plotted, with each getting their own unique line type, colour, and marker to differentiate each one. This was done by using shortcuts as arguments after the arguments for the x and y points when calling matlibplot's plot module[20]. For example, 'b-o' creates a blue straight line with a circle marking each value. Labels are added to each line within the plot, as well as the axis, a title, and a legend in order to let the user know what the plot is doing. In order to make the plot more readable and user friendly, a grid was added, and the tick values on the y-axis were changed from the default 10 to 5 by adapting a line of code found on StackOverflow[21]. The resulting plot is then saved.
 
 
 #### Acknowledgemnts
@@ -165,7 +170,7 @@ It should be noted that the majority of the ideas and concepts covered here came
 6. Sturtz, J. 2021. Python "while" Loops (Indefinite Iteration). [online] Available at: <https://realpython.com/python-while-loop/> [Accessed 16 March 2021].
 7. Sturtz, J. 2021. Conditional Statements in Python. [online] Available at: <https://realpython.com/python-conditional-statements/> [Accessed 16 March 2021].
 8. W3schools.com. 2021. Python Lists. [online] Available at: <https://www.w3schools.com/python/python_lists.asp> [Accessed 16 March 2021]
-9. stackoverflow.com. 2021. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
+9. Cunningham, P. 2014. Check if input is positive integer. [online] Available at: <https://stackoverflow.com/questions/26198131/check-if-input-is-positive-integer> [Accessed 16 March 2021].
 10. W3schools.com. 2021. Python Try Except. [online] Available at: <https://www.w3schools.com/python/python_try_except.asp> [Accessed 17
  March 2021]
 11. W3schools.com. 2021. Python Datetime. [online] Available at: <https://www.w3schools.com/python/python_datetime.asp> [Accessed 18 March 2021]
@@ -174,4 +179,10 @@ It should be noted that the majority of the ideas and concepts covered here came
 14. geeksforgeeks.com. 2019. How to use sys.argv in Python. [online] Available at: <https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/> [Accessed 20 March 2021]
 15. Ndlovu, V. 2021. Working With Files in Python. [online] Available at: <https://realpython.com/working-with-files-in-python/> [Accessed 16 March 2021].
 16. W3schools.com. 2021. Python String count() Method. [online] Available at: <https://www.w3schools.com/python/ref_string_count.asp> [Accessed 20 March 2021]
+17. FewSteps. 2021. Fixed Pylint (import-error) Unable to import - How to fix Unable to import '' pylint(import-error). [online] Available at: <https://www.youtube.com/watch?v=BhNDn-FkKiU> [Accessed 21 March 2021]
+18. W3schools.com. 2021. Matplotlib Tutorial. [online] Available at: <https://www.w3schools.com/python/matplotlib_intro.asp> [Accessed 21 March 2021]
+19. W3schools.com. 2021. NumPy Introduction. [online] Available at: <https://www.w3schools.com/python/numpy_intro.asp> [Accessed 21 March 2021]
+20. W3schools.com. 2021. Matplotlib Markers. [online] Available at: <https://www.w3schools.com/python/matplotlib_markers.asp> [Accessed 21 March 2021]
+21. unutbu. 2012. Changing the “tick frequency” on x or y axis in matplotlib?. [online] Available at: <https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-x-or-y-axis-in-matplotlib/12608937> [Accessed 21 March 2021].
+
 
