@@ -183,6 +183,6 @@ It should be noted that the majority of the ideas and concepts covered here came
 18. W3schools.com. 2021. Matplotlib Tutorial. [online] Available at: <https://www.w3schools.com/python/matplotlib_intro.asp> [Accessed 21 March 2021]
 19. W3schools.com. 2021. NumPy Introduction. [online] Available at: <https://www.w3schools.com/python/numpy_intro.asp> [Accessed 21 March 2021]
 20. W3schools.com. 2021. Matplotlib Markers. [online] Available at: <https://www.w3schools.com/python/matplotlib_markers.asp> [Accessed 21 March 2021]
-21. unutbu. 2012. Changing the “tick frequency” on x or y axis in matplotlib?. [online] Available at: <https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-x-or-y-axis-in-matplotlib/12608937> [Accessed 21 March 2021].
+21. unutbu. 2012. Changing the “tick frequency” on x or y axis in matplotlib?. [online] Available at: <https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-x-or-y-axis-in-matplotlib/12608937> [Accessed 21 March 2021]
 
 
