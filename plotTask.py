@@ -34,7 +34,7 @@ plt.legend()
 # Adds a grid to help easier see the values of each line
 plt.grid()
 
-plt.show()
-
 # Saves the plot as a png image
 plt.savefig('taskPlot.png')
+
+plt.show()
