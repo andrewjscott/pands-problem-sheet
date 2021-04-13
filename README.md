@@ -13,8 +13,7 @@
 >BMI is 20.06.
 
 ### Solution
-First, the input() method[1] is used in order to ask the user to enter both a weight and a height. The numbers entered by the user
-are then assigned to variables called weight and height. 
+First, the input() method[1] is used in order to ask the user to enter both a weight and a height. The numbers entered by the user are then assigned to variables called weight and height. 
 
 To calculate the BMI, I used the following line of code: bmi = float(weight)/((float(height)/100)**2)
 Python takes user inputs to be string types, so in order to perform calculations on them float is used to convert the variables
