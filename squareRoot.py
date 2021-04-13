@@ -2,13 +2,13 @@
 # Author: Andrew Scott
 
 # A function that calculates the square root via the Babylonian method.
-# The variable t is the tolerance level. This means the program will loop until the current answer 
+# The variable tolerance is the tolerance level. This means the program will loop until the current answer 
 # minus the previous answer is within the tolerance level. Abs is used so the answer being plus or minus
 # isn't important as long as it's within the tolerance level. 
 # When this happens the loop ends and we assume we have found a good approximation of the square root
 
-# The variable g is the initial guess of the square root needed to use in the formula. The formula works by taking the
-# initial guess, plugging it in the formula, then replacing the guess with the answer for the next iteration (newG). This repeats 
+# The variable inital_guess is the initial guess of the square root needed to use in the formula. The formula works by taking the
+# initial guess, plugging it in the formula, then replacing the guess with the answer for the next iteration (new_guess). This repeats 
 # until the answers are within the tolerance level. For our purposes the initial guess will be just the number we want to find
 # the square root of divided by 2. 
 
@@ -20,14 +20,14 @@
 # https://mathlesstraveled.com/2009/05/18/square-roots-with-pencil-and-paper-the-babylonian-method/
 
 def sqrt(x):
-    g = x / 2
-    t = 0.00001
+    inital_guess = x / 2
+    tolerance = 0.00001
 
     while True:
-        newG = (g + (x/g)) / 2
-        if abs(g - newG) < t:
-            return newG
-        g = newG
+        new_guess = (inital_guess + (x/inital_guess)) / 2
+        if abs(inital_guess - new_guess) < tolerance:
+            return new_guess
+        inital_guess = new_guess
 
 # Asks the user to enter a positive integer. If they enter something else an error is shown and they are asked to enter again
 # This section of code was mostly apated from a response on stackoverflow in order to return 

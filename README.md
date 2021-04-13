@@ -41,11 +41,11 @@ again. This will repeat until the user enters a valid whole number.
 > .o zletrv pu o wr cu h   
 
 ### Solution
-First the user is asked to input a string which is stored to a variable. Each character in a string has a corresponding numberical value, with the first character 0, second character 1, etc. Slicing a string is done by using square brackets followed by the number corresponding to the start point, end point, and steps of the slicing with each number seperated by colons, ie [slicing start point:slicing end point:steps taken while slicing][5].
+First the user is asked to input a string which is stored to a variable. Each character in a string has a corresponding numerical value, with the first character 0, second character 1, etc. Slicing a string is done by using square brackets followed by the number corresponding to the start point, end point, and steps of the slicing with each number separated by colons, i.e. [slicing start point:slicing end point:steps taken while slicing][5].
 
 If the slicing start and end points are left blank, python assumes these values to correspond to the beginning and end of the string
-If the steps is left out copletely pythons continues with steps as a value of 1 by default. A minus value for steps means the string is sliced in reverse. So in this code, the values for the start and end point are left blank to include the entire string, while
-the steps is set to -2, which starts the slicing in reverse and only insludes every second letter. 
+If no value is used to specify the size of the step, python continues with steps as a value of 1 by default. A minus value for steps means the string is sliced in reverse. So in this code, the values for the start and end point are left blank to include the entire string, while
+the steps is set to -2, which starts the slicing in reverse and only includes every second letter. 
 
 Using slicing in this manner, the user entered string can be manipulated and output in the manner requested in the task outline. 
 
@@ -74,7 +74,7 @@ the number is even or not. If there is a remainder after the number is divided b
 
 Printing a list does mean the output is slightly different that the output in the task outline ([10, 5, 16, 8, 4, 2, 1] vs 10 5 16 8 4 2 1). However, I feel using a list is the neatest method to solve this problem, so decided to use it despite the aesthetic differences in the output. 
 
-This code was later altered to include error detection to ensure the user only enters a positive integer. If they enter anything else an error message is ouput and they are asked to input a positive integer again. The code to do this was found on stackoverflow as an answer by a user named Padraic Cunningham[9]. This code includes a loop that first determines if the user input is an integer. if it is, it then checks if it is positive by seeing if the integer is less than 0. If the number is less than 0 the user is asked to enter a number again. If the user enters something other than an integer, a seperate block of code kicks in to tell the user that they have not entered an integer and to try again. This will repeat and only end once the user enters a positive integer. Further research shows that the 'try except' aspect of this code is used to test for error detection[10].
+This code was later altered to include error detection to ensure the user only enters a positive integer. If they enter anything else an error message is output and they are asked to input a positive integer again. The code to do this was found on stackoverflow as an answer by a user named Padraic Cunningham[9]. This code includes a loop that first determines if the user input is an integer. if it is, it then checks if it is positive by seeing if the integer is less than 0. If the number is less than 0 the user is asked to enter a number again. If the user enters something other than an integer, an additional block of code kicks in to tell the user that they have not entered an integer and to try again. This will repeat and only end once the user enters a positive integer. Further research shows that the 'try except' aspect of this code is used to test for error detection[10].
 
 
 ## Weekly Task 4 - weekday
@@ -93,9 +93,9 @@ This code was later altered to include error detection to ensure the user only e
 > It is the weekend, yay! 
 
 ### Solution
-To easily work with dates in python, the "datetime" module was imported[11]. A list containing the two days of the weekend (Saturday and Sunday) was then created. A variable "date" was assigned information about the current date using the method "datetime.datetime.now()". This variable will then be updated to relect the date whenever the program is run. 
+To easily work with dates in python, the "datetime" module was imported[11]. A list containing the two days of the weekend (Saturday and Sunday) was then created. A variable "date" was assigned information about the current date using the method "datetime.datetime.now()". This variable will then be updated to reflect the date whenever the program is run. 
 
-The datetime method ".strftime()" can now be used with the variable "date", and by passing the directive "%A" as an argument, the full word of the current day of the week is returned. The day that is returned is then compared with the previously created list, and if it matches a value in that list (ie the returned day is either "Saturday" or "Sunday") then the message "It is the weekend, yay!" is returned to the user. If the returned day is neither Saturday nor Sunday it is by default a weekday, so the returned message is instead "Yes, unfortunately today is a weekday.".
+The datetime method ".strftime()" can now be used with the variable "date", and by passing the directive "%A" as an argument, the full word of the current day of the week is returned. The day that is returned is then compared with the previously created list, and if it matches a value in that list (i.e. the returned day is either "Saturday" or "Sunday") then the message "It is the weekend, yay!" is returned to the user. If the returned day is neither Saturday nor Sunday it is by default a weekday, so the returned message is instead "Yes, unfortunately today is a weekday.".
 
 
 ## Weekly Task 5 - squareRoot
@@ -116,18 +116,18 @@ The datetime method ".strftime()" can now be used with the variable "date", and 
 > The square root of 14.5 is approx. 3.8.   
 
 ### Solution
-The first step was to research methods for calculating square roots. While the task suggests using the Newton method for calculating square roots, I found the additional calculus and formulae associated with the method both distracting and overwhelming. This initial research did reveal that the Newton method is closely related to the Babylonian method for calculating square roots, however, and finding this method easier to read and follow I used the Babylonian method in this code[12][13]. For this code I have written it as newG = (g + (x/g)) / 2, g being an initial guess, and x being the number entered by the user that we want to find the square root of. This formula is then repeated with the answer from the previous itteration used in place of the initial guess, and this process repeats until the answers are almost identical. 
+The first step was to research methods for calculating square roots. While the task suggests using the Newton method for calculating square roots, I found the additional calculus and formulae associated with the method both distracting and overwhelming. This initial research did reveal that the Newton method is closely related to the Babylonian method for calculating square roots, however, and finding this method easier to read and follow I used the Babylonian method in this code[12][13]. For this code I have written it as new_guess = (initial_guess + (x/initial_guess))/2, initial_guess being an initial guess of the square root to plug into the formula, and x being the number entered by the user that we want to find the square root of. This formula is then repeated with the answer from the previous iteration used in place of the initial guess, becoming new_guess, and this process repeats until the answers are almost identical. 
 
 The function for calculating a square root contains two initial variables. 
 
-The first, g, is the initial guess. The formula requires an initial guess for the square root's value. Rather than have the user 
+The first, initial_guess, is the initial guess. The formula requires an initial guess for the square root's value. Rather than have the user 
 enter a value, a formula of the number that we want to find the square root of divided by 2 is used as the initial guess. This 
-is not the most efficient in terms of finding the square root in the fewest itterations of the loop, as a guess closer to 
+is not the most efficient in terms of finding the square root in the fewest iterations of the loop, as a guess closer to 
 the square root will solve faster. However, this formula for an initial guess should be good enough for our purposes and 
-saves the user from having to enter anything other than the number the want the square root of. As the function itterates, 
-the value for g is replaced by the answer of that loop, newG.
+saves the user from having to enter anything other than the number the want the square root of. As the function iterates, 
+the value for initial_guess is replaced by the answer of that loop, new_guess.
 
-The second, t, is the tolerance. This means the program will loop until the current answer for g/newG minus the previous answer for g/newG is within the tolerance level. When this happens, we should be returned a pretty good approximation of the square root. 
+The second, is tolerance. This means the program will loop until the current answer for initial_guess/new_guess minus the previous answer for initial_guess/new_guess is within the tolerance level. When this happens, we should be returned a pretty good approximation of the square root. 
 
 For taking the user input, code from the solution for the collatz task was reused for error detection, as this task also requires the user input to only be a positive number. The only change is converting the user input to a float. The sqrt function previously written is then called, and the output is returned and rounded to 1 decimal place.
 
@@ -140,11 +140,11 @@ For taking the user input, code from the solution for the collatz task was reuse
 > 116960 
 
 ### Solution
-This task requires teh filename to be taken as an argument from the commandline, which can be done by importing the sys module and using sys.argv[14]. As the program itself is in position 0, the line sys.argv[1] takes the next argument, ie the filename entered by the user, and stores it too a variable called filename.
+This task requires the filename to be taken as an argument from the command line, which can be done by importing the sys module and using sys.argv[14]. As the program itself is in position 0, the line sys.argv[1] takes the next argument, i.e. the filename entered by the user, and stores it too a variable called filename.
 
-The task was ambiguous as to whether the program should count only the symbol 'e', ie only the lower case e, or if it should count all instances or the letter e, which would include lower case e and upper case E. As such, two functions have been included to cover both cases. The first counts instances of 'e' while the second counts instances of 'E'. The function imports the file called by the user and the count method is used to count the number of instances of either 'e' or 'E'[15][16]. The returned values are converted to strings to be output to the user.
+The task was ambiguous as to whether the program should count only the symbol 'e', i.e. only the lower case e, or if it should count all instances or the letter e, which would include lower case e and upper case E. As such, two functions have been included to cover both cases. The first counts instances of 'e' while the second counts instances of 'E'. The function imports the file called by the user and the count method is used to count the number of instances of either 'e' or 'E'[15][16]. The returned values are converted to strings to be output to the user.
 
-If statements are used when returning the values to the user for gramatical purposes. Should either character only appear once, the singular 'time' is used, otherwise the sentence with say the character appear "x times". The variable total is the sum of the amount of lowercase es and uppercase Es, which is also returned to the user.
+If statements are used when returning the values to the user for grammatical purposes. Should either character only appear once, the singular 'time' is used, otherwise the sentence with say the character appear "x times". The variable total is the sum of the amount of lowercase e's and uppercase E's, which is also returned to the user.
 
 
 ## Weekly Task 7 - plotTask
@@ -157,9 +157,10 @@ First, matlibplot and numpy are imported. When first trying to import matlibplot
 
 The y-axis plots are defined by the results of the three functions being plotted, so each gets their own variable. The results of each function are then plotted, with each getting their own unique line type, colour, and marker to differentiate each one. This was done by using shortcuts as arguments after the arguments for the x and y points when calling matlibplot's plot module[20]. For example, 'b-o' creates a blue straight line with a circle marking each value. Labels are added to each line within the plot, as well as the axis, a title, and a legend in order to let the user know what the plot is doing. In order to make the plot more readable and user friendly, a grid was added, and the tick values on the y-axis were changed from the default 10 to 5 by adapting a line of code found on StackOverflow[21]. The resulting plot is then saved. Originally, saving the plot was the last line of code, but this resulted in the plot being saved as a blank image. After looking this issue up, it seems that the image should be saved first before being shown otherwise it will end up as a blank image[22].
 
+![alt text](https://raw.githubusercontent.com/andrewjscott/pands-problem-sheet/main/taskPlot.png "Plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4]")
 
-#### Acknowledgemnts
-It should be noted that the majority of the ideas and concepts covered here came from a fantastic lecture series called Programming and Scripting by Andrew Beatty. The refrences below are in many cases supplemental to that series and are offered as a textual alternative that covers similar content. 
+#### Acknowledgements
+It should be noted that the majority of the ideas and concepts covered here came from a fantastic lecture series called Programming and Scripting by Andrew Beatty. The references below are in many cases supplemental to that series and are offered as a text-based alternative that covers similar content. 
 
 #### References
 1. W3schools.com. 2021. Python User Input. [online] Available at: <https://www.w3schools.com/python/python_user_input.asp> [Accessed 15 March 2021].
