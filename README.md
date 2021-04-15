@@ -1,6 +1,13 @@
 # Programming and Scripting Problem Sheets
 ## Andrew Scott - Student ID: G00398249
 
+This code was written in Python 3.8.3 using Visual Studio Code version 1.55.2.
+Python packages not part of the Python Standard Library used were:
+numpy==1.18.5
+matplotlib==3.2.2
+These can be installed by downloading the requirements.txt file and running pip3 install -r requirements.txt.
+The requirements.txt file was generated using pipreqs 0.4.10.
+
 ## Weekly Task 1 - bmi
 > 1. Write a program that calculates somebody's Body Mass Index (BMI). Call the file bmi.py
 > - The inputs are the person's height in centimetres and weight in kilograms.
