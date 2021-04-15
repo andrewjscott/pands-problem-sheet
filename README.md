@@ -4,7 +4,7 @@
 This code was written in Python 3.8.3 using Visual Studio Code version 1.55.2.
 
 Python packages not part of the Python Standard Library that were installed and used are:   
-numpy==1.18.5
+numpy==1.18.5   
 matplotlib==3.2.2
 
 These can be installed by downloading the requirements.txt file and running pip3 install -r requirements.txt.
