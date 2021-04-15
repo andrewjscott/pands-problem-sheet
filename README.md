@@ -3,7 +3,7 @@
 
 This code was written in Python 3.8.3 using Visual Studio Code version 1.55.2.
 
-Python packages not part of the Python Standard Library that were installed and used are:
+Python packages not part of the Python Standard Library that were installed and used are:   
 numpy==1.18.5
 matplotlib==3.2.2
 
